@@ -1,0 +1,456 @@
+<!doctype html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - ZAWED</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f0e0c;
+        --surface: #1a1916;
+        --border: #2e2c28;
+        --gold: #c9a84c;
+        --gold-light: #e8c97a;
+        --text: #e8e4dc;
+        --muted: #8a8478;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Tajawal", sans-serif;
+        line-height: 1.8;
+      }
+      .lang-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(15, 14, 12, 0.97);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px;
+      }
+      .lang-btn {
+        padding: 8px 28px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-family: "Tajawal", sans-serif;
+        font-size: 14px;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .lang-btn.active {
+        background: var(--gold);
+        color: #0f0e0c;
+        border-color: var(--gold);
+        font-weight: 700;
+      }
+      .hero {
+        text-align: center;
+        padding: 80px 24px 60px;
+        background: radial-gradient(
+          ellipse at top,
+          rgba(201, 168, 76, 0.07) 0%,
+          transparent 60%
+        );
+      }
+      .hero-label {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(28px, 5vw, 52px);
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+      .hero-date {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .divider {
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+        margin: 24px auto;
+      }
+      .container {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 20px 24px 100px;
+      }
+      .section {
+        margin-bottom: 32px;
+        padding: 32px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        position: relative;
+      }
+      .section-num {
+        position: absolute;
+        top: -1px;
+        right: 28px;
+        background: var(--gold);
+        color: #0f0e0c;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 4px 12px;
+        border-radius: 0 0 4px 4px;
+      }
+      .section h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--gold-light);
+        margin-bottom: 14px;
+      }
+      .section p {
+        color: #c8c4bc;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+      .data-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .data-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(201, 168, 76, 0.06);
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        padding: 10px 14px;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #c8c4bc;
+      }
+      .data-list li::before {
+        content: "✦";
+        color: var(--gold);
+        font-size: 10px;
+        flex-shrink: 0;
+      }
+      .highlight-box {
+        background: rgba(61, 107, 94, 0.15);
+        border: 1px solid rgba(61, 107, 94, 0.4);
+        border-radius: 3px;
+        padding: 14px 18px;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #a8c4bc;
+      }
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: #c8c4bc;
+      }
+      .contact-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(201, 168, 76, 0.1);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+      footer {
+        text-align: center;
+        padding: 40px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 12px;
+      }
+      #page-en {
+        display: none;
+        direction: ltr;
+        text-align: left;
+      }
+      .en-active #page-ar {
+        display: none;
+      }
+      .en-active #page-en {
+        display: block;
+      }
+      @media (max-width: 600px) {
+        .data-list {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body id="mainbody">
+    <div class="lang-bar">
+      <button class="lang-btn active" id="btn-ar" onclick="showAr()">
+        عربي
+      </button>
+      <button class="lang-btn" id="btn-en" onclick="showEn()">English</button>
+    </div>
+
+    <div class="hero">
+      <p class="hero-label">Legal Document</p>
+      <h1 id="hero-title">سياسة الخصوصية</h1>
+      <div class="divider"></div>
+      <p class="hero-date" id="hero-date">آخر تحديث: فبراير ٢٠٢٥</p>
+    </div>
+
+    <div class="container">
+      <div id="page-ar">
+        <div class="section">
+          <span class="section-num">01</span>
+          <h2>مقدمة</h2>
+          <p>
+            نحن نأخذ خصوصيتك على محمل الجد. توضح هذه السياسة كيفية جمع معلوماتك
+            الشخصية واستخدامها وحمايتها عند استخدام تطبيق ZAWED.
+          </p>
+          <p>
+            باستخدامك للتطبيق، فإنك توافق على الشروط الواردة في هذه الوثيقة.
+          </p>
+        </div>
+        <div class="section">
+          <span class="section-num">02</span>
+          <h2>البيانات التي نجمعها</h2>
+          <p>يجمع التطبيق البيانات التالية لأغراض تشغيلية فقط:</p>
+          <ul class="data-list">
+            <li>الاسم الكامل</li>
+            <li>البريد الإلكتروني</li>
+            <li>رقم الجوال</li>
+            <li>الموقع الجغرافي (يُكتب يدوياً للتوصيل)</li>
+            <li>رقم الآيبان (عند الاسترجاع)</li>
+            <li>آخر 4 أرقام من البطاقة (للتحقق فقط)</li>
+          </ul>
+        </div>
+        <div class="section">
+          <span class="section-num">03</span>
+          <h2>كيف نستخدم بياناتك</h2>
+          <p>
+            تُستخدم بياناتك
+            <strong style="color: var(--gold-light)">حصراً داخل التطبيق</strong>
+            للأغراض التالية:
+          </p>
+          <p>• تسجيل الدخول وإدارة حسابك الشخصي</p>
+          <p>• معالجة الطلبات وعمليات الاسترجاع</p>
+          <p>• توصيل الطلبات بناءً على العنوان المُدخل</p>
+          <p>• تسهيل عمليات استرداد المبالغ عبر الآيبان</p>
+          <div class="highlight-box">
+            ✅ لا تُباع بياناتك ولا تُشارك مع أي طرف ثالث. جميع البيانات محمية
+            ومقيدة الاستخدام داخلياً فقط.
+          </div>
+        </div>
+        <div class="section">
+          <span class="section-num">04</span>
+          <h2>البيانات المالية الحساسة</h2>
+          <p>فيما يخص رقم الآيبان وآخر أربعة أرقام من البطاقة:</p>
+          <p>
+            • آخر أربعة أرقام من البطاقة تُستخدم
+            <strong style="color: var(--gold-light)">كتأكيد فقط</strong> للتحقق
+            من أن العملية تمّت عن طريق نفس البطاقة، ولا تُخزَّن
+          </p>
+          <p>
+            • رقم الآيبان يُجمع فقط عند تقديم طلب استرجاع لإتمام عملية رد المبلغ
+          </p>
+          <p>
+            • البيانات المالية محمية بالكامل عن طريق البنك ولا يمكن لأي طرف
+            الاطلاع عليها
+          </p>
+        </div>
+        <div class="section">
+          <span class="section-num">05</span>
+          <h2>حقوقك</h2>
+          <p>يحق لك في أي وقت:</p>
+          <p>• طلب الاطلاع على بياناتك الشخصية</p>
+          <p>• طلب تصحيح أي معلومات غير دقيقة</p>
+          <p>• حذف بياناتك بشكل تلقائي من داخل التطبيق مباشرةً</p>
+        </div>
+        <div class="section">
+          <span class="section-num">06</span>
+          <h2>تواصل معنا</h2>
+          <p>لأي استفسار حول سياسة الخصوصية أو بياناتك:</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">✉</div>
+              <span id="email-ar"></span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <span>0541453548</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="page-en">
+        <div class="section">
+          <span class="section-num">01</span>
+          <h2>Introduction</h2>
+          <p>
+            We take your privacy seriously. This policy explains how we collect,
+            use, and protect your personal information when you use the ZAWED
+            application.
+          </p>
+          <p>
+            By using the app, you agree to the terms described in this document.
+          </p>
+        </div>
+        <div class="section">
+          <span class="section-num">02</span>
+          <h2>Data We Collect</h2>
+          <p>
+            The app collects the following data for operational purposes only:
+          </p>
+          <ul class="data-list">
+            <li>Full Name</li>
+            <li>Email Address</li>
+            <li>Phone Number</li>
+            <li>Geographic Location (entered manually for delivery)</li>
+            <li>IBAN Number (refunds only)</li>
+            <li>Last 4 digits of card (verification only)</li>
+          </ul>
+        </div>
+        <div class="section">
+          <span class="section-num">03</span>
+          <h2>How We Use Your Data</h2>
+          <p>
+            Your data is used
+            <strong style="color: var(--gold-light)"
+              >exclusively within the app</strong
+            >
+            for the following purposes:
+          </p>
+          <p>• Account login and personal account management</p>
+          <p>• Processing orders and refund requests</p>
+          <p>• Order delivery based on the entered address</p>
+          <p>• Facilitating refund transactions via IBAN</p>
+          <div class="highlight-box">
+            ✅ Your data is never sold or shared with any third party. All data
+            is protected and restricted to internal use only.
+          </div>
+        </div>
+        <div class="section">
+          <span class="section-num">04</span>
+          <h2>Sensitive Financial Data</h2>
+          <p>Regarding your IBAN and last four card digits:</p>
+          <p>
+            • The last four card digits are used
+            <strong style="color: var(--gold-light)"
+              >for verification only</strong
+            >
+            to confirm that the transaction was made using the same card, and
+            are not stored
+          </p>
+          <p>
+            • IBAN is collected only when submitting a refund request to process
+            the return
+          </p>
+          <p>
+            • All financial data is fully protected through the bank and cannot
+            be accessed by any party
+          </p>
+        </div>
+        <div class="section">
+          <span class="section-num">05</span>
+          <h2>Your Rights</h2>
+          <p>You have the right at any time to:</p>
+          <p>• Request access to your personal data</p>
+          <p>• Request correction of inaccurate information</p>
+          <p>• Delete your data automatically directly from within the app</p>
+        </div>
+        <div class="section">
+          <span class="section-num">06</span>
+          <h2>Contact Us</h2>
+          <p>For any questions about this privacy policy or your data:</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">✉</div>
+              <span id="email-en"></span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <span>0541453548</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p id="footer-text">©️ 2025 ZAWED — جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+      (function () {
+        var u = "Support";
+        var d = "zadnow.com";
+        var full = u + "\u0040" + d;
+        document.getElementById("email-ar").textContent = full;
+        document.getElementById("email-en").textContent = full;
+      })();
+
+      function showAr() {
+        document.getElementById("mainbody").classList.remove("en-active");
+        document.documentElement.setAttribute("dir", "rtl");
+        document.getElementById("btn-ar").classList.add("active");
+        document.getElementById("btn-en").classList.remove("active");
+        document.getElementById("hero-title").textContent =
+          "\u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629";
+        document.getElementById("hero-date").textContent =
+          "\u0622\u062e\u0631 \u062a\u062d\u062f\u064a\u062b: \u0641\u0628\u0631\u0627\u064a\u0631 \u0662\u0660\u0662\u0665";
+        document.getElementById("footer-text").textContent =
+          "\u00a9 2025 ZAWED \u2014 \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629";
+      }
+
+      function showEn() {
+        document.getElementById("mainbody").classList.add("en-active");
+        document.documentElement.setAttribute("dir", "ltr");
+        document.getElementById("btn-en").classList.add("active");
+        document.getElementById("btn-ar").classList.remove("active");
+        document.getElementById("hero-title").textContent = "Privacy Policy";
+        document.getElementById("hero-date").textContent =
+          "Last updated: February 2025";
+        document.getElementById("footer-text").textContent =
+          "\u00a9 2025 ZAWED \u2014 All rights reserved";
+      }
+    </script>
+  </body>
+</html>
